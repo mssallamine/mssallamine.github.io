@@ -1,4 +1,61 @@
 /* =============================================
+   i18n — LANGUAGE DETECTION & SWITCHING
+   ============================================= */
+
+const SUPPORTED_LANGS = ['en', 'fr', 'ar'];
+const RTL_LANGS       = ['ar'];
+let   arabicFontLoaded = false;
+
+function detectLang() {
+  const saved = localStorage.getItem('lang');
+  if (saved && SUPPORTED_LANGS.includes(saved)) return saved;
+  const browser = (navigator.language || 'en').slice(0, 2).toLowerCase();
+  return SUPPORTED_LANGS.includes(browser) ? browser : 'en';
+}
+
+function loadArabicFont() {
+  if (arabicFontLoaded) return;
+  const link  = document.createElement('link');
+  link.rel    = 'stylesheet';
+  link.href   = 'https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600&display=swap';
+  document.head.appendChild(link);
+  arabicFontLoaded = true;
+}
+
+function applyLang(lang) {
+  localStorage.setItem('lang', lang);
+  const html = document.documentElement;
+  html.lang  = lang;
+  html.dir   = RTL_LANGS.includes(lang) ? 'rtl' : 'ltr';
+  if (lang === 'ar') loadArabicFont();
+
+  const t = translations[lang];
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+
+  if (t.page_title) document.title = t.page_title;
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+}
+
+applyLang(detectLang());
+
+document.getElementById('lang-switcher').addEventListener('click', e => {
+  const btn = e.target.closest('.lang-btn');
+  if (btn) applyLang(btn.dataset.lang);
+});
+
+/* =============================================
    NAVIGATION — sticky shadow & active state
    ============================================= */
 
