@@ -1,0 +1,136 @@
+%% ============================================================
+%% CV -- ONE PAGE
+%% Allamine Mahamat Moussa
+%% Compile: pdflatex -interaction=nonstopmode cv_one_page.tex
+%% ============================================================
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\usepackage[a4paper,
+            top=0.7cm, bottom=0.7cm,
+            left=1.5cm, right=1.5cm]{geometry}
+
+\usepackage{xcolor}
+\definecolor{navy}{RGB}{13,31,60}
+\definecolor{gold}{RGB}{201,168,76}
+\definecolor{mgray}{RGB}{95,105,120}
+
+\usepackage{array}
+\usepackage{tabularx}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\pagestyle{empty}
+
+%% -- Tight section heading
+\newcommand{\cvsection}[1]{%
+  \vspace{4pt}\noindent%
+  {\footnotesize\bfseries\color{navy}\MakeUppercase{#1}}%
+  \par\nointerlineskip\vspace{0.5pt}%
+  {\color{gold}\rule{\linewidth}{0.65pt}}%
+  \par\vspace{1.5pt}%
+}
+
+%% Narrow date column; X expands to fill the line
+\newcolumntype{D}{>{\raggedright\color{mgray}\footnotesize}p{2.1cm}}
+
+%% ============================================================
+\begin{document}
+
+%% ---- HEADER -----------------------------------------------
+\begin{center}
+  {\large\bfseries\color{navy} Allamine Mahamat Moussa}\\[1pt]
+  {\footnotesize\color{mgray}
+    PhD Researcher $\cdot$ Development Economics $\cdot$
+    Policy Evaluation $\cdot$ Data Analysis}\\[0.5pt]
+  {\footnotesize
+    Universit\'{e} Clermont Auvergne / Laboratoire d'\'Economie d'Orl\'eans (LEO)}\\[0.5pt]
+  {\footnotesize\color{mgray}
+    Allamine\_Mahamat.Moussa@doctorant.uca.fr \;$|$\; ORCID: 0009-0001-5953-0888
+    \;$|$\; linkedin.com/in/moussa-allamine-430361178 \;$|$\; github.com/mssallamine}
+\end{center}
+\vspace{0.5pt}
+{\color{gold}\rule{\linewidth}{0.9pt}}
+\vspace{1.5pt}
+
+%% ---- PROFILE ----------------------------------------------
+\cvsection{Profile}
+{\footnotesize
+PhD researcher (2025--2028) at UCA/LEO. Thesis: \textit{Essays on Macroeconomic Sovereignty
+in the Global South}. Research: IMF programmes, fiscal space, global financial cycles,
+public investment, geospatial evaluation. Policy evaluation at ADE, Belgium (2025).
+}
+
+%% ---- EDUCATION --------------------------------------------
+\cvsection{Education}
+{\footnotesize
+\begin{tabularx}{\linewidth}{@{} D X @{}}
+2025--2028 &
+  \textbf{PhD in Development Economics} --- Universit\'{e} Clermont Auvergne / LEO\\
+  & Supervisors: Prof.\ J.-L.\ Combes \& Prof.\ P.\ Motel Combes;
+    Collab.: Prof.\ J.-C.\ Kouladoum (N'Djam\'{e}na)\\[0.5pt]
+2023--2025 &
+  \textbf{Master 2 in Development Economics} --- Universit\'{e} Clermont Auvergne\\[0.5pt]
+2022--2023 &
+  \textbf{Aspire Leaders Program} --- Aspire Institute / Harvard University\\[0.5pt]
+2018--2021 &
+  \textbf{Licence in Economics} --- Kigali Independent University, Rwanda\\
+\end{tabularx}
+}
+
+%% ---- EXPERIENCE -------------------------------------------
+\cvsection{Professional Experience}
+{\footnotesize
+\begin{tabularx}{\linewidth}{@{} D X @{}}
+Feb--Jul 2025 &
+  \textbf{Intern, Strategic \& Impact Evaluation} ---
+  ADE (Aide \`{a} la D\'{e}cision \'{E}conomique), Belgium\\
+  & EU evaluations: EU--DRC (2021--24), Refugees in Turkey, GAP III;
+    IATI extraction, QGIS, AI classification.\\[0.5pt]
+Oct--Dec 2024 &
+  \textbf{English Tutor} --- Universit\'{e} Clermont Auvergne\\[0.5pt]
+2024 &
+  \textbf{Deputy Coordinator} --- ATIMM Foundation\\[0.5pt]
+2022 &
+  \textbf{Public Policy Analyst Intern} ---
+  Obs.\ National du Dividende D\'{e}mographique, Chad\\[0.5pt]
+2021 &
+  \textbf{Opinion Writer Intern} --- The Campus Ltd., Rwanda\\
+\end{tabularx}
+}
+
+%% ---- RESEARCH ---------------------------------------------
+\cvsection{Research (PhD Thesis)}
+{\footnotesize
+\begin{tabularx}{\linewidth}{@{} >{\color{mgray}\footnotesize}p{0.9cm} X @{}}
+Ch.\,1 &
+  \textit{IMF Programmes and Public Investment in the Global South.}
+  Preliminary analysis; working paper in preparation.\\[0.5pt]
+Ch.\,2 &
+  \textit{Global Financial Cycles and Macroeconomic Sovereignty.}
+  Data construction / preliminary design.\\[0.5pt]
+Ch.\,3 &
+  \textit{Resource Dependence, Fiscal Resilience, Structural Transformation.}
+  Under development.\\[0.5pt]
+Ch.\,4 &
+  \textit{Hydropower and Forest Loss in Virunga (Matebe Project, DRC).}
+  Working paper, preparing for journal submission.\\
+\end{tabularx}
+}
+
+%% ---- SKILLS & LANGUAGES -----------------------------------
+\cvsection{Methods, Tools \& Languages}
+{\footnotesize
+\textbf{Methods:} Panel data $\cdot$ event studies $\cdot$ local projections $\cdot$
+  spatial DiD $\cdot$ DiD $\cdot$ PSM $\cdot$ synthetic control $\cdot$
+  time series $\cdot$ geospatial analysis $\cdot$ remote sensing.\\[0.5pt]
+\textbf{Software:} R $\cdot$ Stata $\cdot$ Python $\cdot$ QGIS $\cdot$
+  Google Earth Engine $\cdot$ \LaTeX $\cdot$ Git/GitHub $\cdot$ Excel.\\[0.5pt]
+\textbf{Languages:} French (fluent) $\cdot$ English (fluent) $\cdot$
+  Arabic (fluent) $\cdot$ Spanish (basic).
+}
+
+\end{document}

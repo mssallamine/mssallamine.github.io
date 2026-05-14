@@ -1,0 +1,22 @@
+# LaTeX temporary files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.fdb
+
+# LaTeX source-folder PDFs (compiled outputs in latex_source/ — not needed for the website)
+assets/cv/latex_source/*.pdf
+
+# LaTeX test files
+assets/cv/latex_source/pkgtest.*
+
+# Claude Code memory (private)
+.claude/
+
+# OS metadata
+.DS_Store
+Thumbs.db

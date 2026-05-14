@@ -1,0 +1,252 @@
+%% ============================================================
+%% CV -- ACADEMIC
+%% Allamine Mahamat Moussa
+%% Compile: pdflatex -interaction=nonstopmode cv_academic.tex
+%% ============================================================
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\usepackage[a4paper,
+            top=1.8cm, bottom=2.0cm,
+            left=2.0cm, right=2.0cm]{geometry}
+
+\usepackage{xcolor}
+\definecolor{navy}{RGB}{13,31,60}
+\definecolor{gold}{RGB}{201,168,76}
+\definecolor{mgray}{RGB}{95,105,120}
+
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\frenchspacing
+
+%% -- Column types
+\newcolumntype{D}{>{\raggedright\color{mgray}\small}p{2.4cm}}
+\newcolumntype{C}{p{\dimexpr\linewidth-2.4cm-2\tabcolsep\relax}}
+
+%% -- Section heading: mixed case, larger, gold rule
+\newcommand{\cvsection}[1]{%
+  \vspace{9pt}\noindent%
+  {\normalsize\bfseries\color{navy}#1}%
+  \par\nointerlineskip\vspace{2pt}%
+  {\color{gold}\rule{\linewidth}{0.9pt}}%
+  \par\vspace{3pt}%
+}
+
+%% -- Page footer (no fancyhdr)
+\makeatletter
+\def\ps@cvfoot{%
+  \let\@mkboth\@gobbletwo
+  \def\@oddhead{}\def\@evenhead{}%
+  \def\@oddfoot{\footnotesize\color{mgray}%
+    Allamine Mahamat Moussa \textemdash\ Academic CV\hfil\thepage}%
+  \def\@evenfoot{\footnotesize\color{mgray}%
+    \thepage\hfil Allamine Mahamat Moussa \textemdash\ Academic CV}%
+}
+\makeatother
+\pagestyle{cvfoot}
+
+%% ============================================================
+\begin{document}
+
+%% ---- HEADER -----------------------------------------------
+\begin{center}
+  {\LARGE\bfseries\color{navy} Allamine Mahamat Moussa}\\[4pt]
+  {\normalsize\color{mgray} PhD Researcher in Development Economics}\\[3pt]
+  {\small
+    Universit\'{e} Clermont Auvergne \textcolor{mgray}{/}
+    Laboratoire d'\'Economie d'Orl\'eans (LEO)\\[3pt]
+    \textcolor{mgray}{
+      Allamine\_Mahamat.Moussa@doctorant.uca.fr \;$|$\;
+      mssallamine@gmail.com \;$|$\; ORCID: 0009-0001-5953-0888
+    }\\[1pt]
+    \textcolor{mgray}{
+      linkedin.com/in/moussa-allamine-430361178 \;$|$\;
+      github.com/mssallamine
+    }
+  }
+\end{center}
+\vspace{3pt}
+{\color{gold}\rule{\linewidth}{1.2pt}}
+\vspace{2pt}
+
+%% ---- RESEARCH PROFILE ------------------------------------
+\cvsection{Research Profile}
+PhD researcher in Development Economics working on macroeconomic sovereignty in the
+Global South: IMF programmes, conditionality, and fiscal space; public investment and
+development finance; global financial cycles; resource dependence; and geospatial
+impact evaluation.
+
+%% ---- RESEARCH INTERESTS -----------------------------------
+\cvsection{Research Interests}
+
+\textbf{Primary:}
+Macroeconomic sovereignty in developing countries; IMF programmes, conditionality,
+and fiscal space; public investment and development finance; global financial cycles
+and monetary policy transmission to the periphery.
+
+\textbf{Secondary:}
+Resource dependence, fiscal resilience, and structural transformation;
+geospatial impact evaluation; remote sensing for development research;
+political economy of development in the Global South.
+
+%% ---- EDUCATION --------------------------------------------
+\cvsection{Education}
+
+\begin{tabular}{@{}DC@{}}
+2025--2028 &
+  \textbf{PhD in Development Economics}\\
+  & Universit\'{e} Clermont Auvergne / Laboratoire d'\'Economie d'Orl\'eans (LEO)\\
+  & Thesis: \textit{Essays on Macroeconomic Sovereignty in the Global South}\\
+  & Supervisors: Prof.\ Jean-Louis Combes \& Prof.\ Pascale Motel Combes (UCA / LEO)\\
+  & Academic collaboration: Prof.\ Jean-Claude Kouladoum
+    (Universit\'{e} de N'Djam\'{e}na / LAREMA)\\[4pt]
+
+2023--2025 &
+  \textbf{Master 2 in Development Economics} \textemdash\
+  Universit\'{e} Clermont Auvergne\\
+  & Thesis: Environmental impact of hydropower in Virunga National Park (DRC)
+    on deforestation.\\[4pt]
+
+2022--2023 &
+  \textbf{Aspire Leaders Program} \textemdash\
+  Aspire Institute / Harvard University\\[4pt]
+
+2018--2021 &
+  \textbf{Licence in Economics} \textemdash\
+  Kigali Independent University (ULK), Rwanda\\
+\end{tabular}
+
+%% ---- WORKING PAPERS & RESEARCH ----------------------------
+\cvsection{Working Papers \& Research in Progress}
+
+\begin{tabular}{@{}DC@{}}
+
+Ch.\,1 &
+  \textbf{Debt Sustainability or Developmental Fiscal Space?
+  IMF Programmes and Public Investment in the Global South}\\
+  & \textit{Preliminary analysis. Working paper in preparation.}\\[2pt]
+  & Examines whether IMF programme entry is associated with a trade-off between fiscal
+    stabilisation and public investment in low- and middle-income countries. Uses programme
+    timing from IMF MONA, fiscal variables from WEO/Fiscal Monitor, and investment data from
+    the IMF Investment and Capital Stock Dataset (ICSD). Event-study design with additional
+    checks on private investment, growth, and HIPC/MDRI debt-relief timing.\\[5pt]
+
+Ch.\,2 &
+  \textbf{Global Financial Cycles and Macroeconomic Sovereignty
+  in Developing Countries}\\
+  & \textit{Data construction and preliminary design.}\\[2pt]
+  & Studies how U.S.\ rate shocks, global risk (VIX), and dollar conditions create external
+    financing pressures in low- and middle-income countries. Focuses on how external debt
+    exposure, reserve buffers, and debt-service pressure condition the erosion of fiscal and
+    developmental policy space, including contractions in public investment and growth.
+    Local projections framework.\\[5pt]
+
+Ch.\,3 &
+  \textbf{Resource Dependence, Fiscal Resilience, and Structural Transformation}\\
+  & \textit{Under development.}\\[2pt]
+  & Will examine how commodity-price shocks and resource dependence shape fiscal resilience
+    and structural transformation in developing economies; whether resource-dependent
+    countries are more vulnerable to global shocks; and whether institutions, fiscal rules,
+    and diversification strategies mitigate those effects.\\[5pt]
+
+Ch.\,4 &
+  \textbf{Hydropower and Forest Loss in a Conflict-Affected Protected Area:
+  Evidence from the Matebe Project in Virunga}\\
+  & \textit{Working paper. Preparing for journal submission.}\\[2pt]
+  & Studies the environmental effects of the Matebe hydropower project near Virunga National
+    Park (DRC). Uses a harmonised 5~km grid-cell panel (2010--2020) combining satellite
+    forest-loss data (Hansen GFW), population, conflict events (ACLED), nighttime lights
+    (VIIRS), terrain, road access, and park-boundary diagnostics. Distinguishes construction
+    and operational phases. Spatial difference-in-differences with robustness checks for
+    comparison-group sensitivity.\\
+
+\end{tabular}
+
+%% ---- PROFESSIONAL EXPERIENCE ------------------------------
+\cvsection{Professional Experience}
+
+\begin{tabular}{@{}DC@{}}
+Feb--Jul 2025 &
+  \textbf{Intern --- Strategic \& Impact Evaluation Department}\\
+  & Aide \`{a} la D\'{e}cision \'{E}conomique (ADE), Brussels, Belgium\\[2pt]
+  & \quad\textcolor{gold}{\small\textbullet}\enspace
+    \textbf{EU--DRC Partnership Evaluation (2021--2024):} document review and coding,
+    IATI data extraction and analysis, geospatial analysis of project locations (QGIS),
+    AI-assisted classification of a large corpus of programme documents.\\[1pt]
+  & \quad\textcolor{gold}{\small\textbullet}\enspace
+    \textbf{Facility for Refugees in Turkey:} desk research, data extraction,
+    and evidence mapping.\\[1pt]
+  & \quad\textcolor{gold}{\small\textbullet}\enspace
+    \textbf{GAP III Gender Action Plan Case Studies:} document analysis and contribution
+    to synthesis reporting.\\[1pt]
+  & \textit{Cross-cutting:} IATI data queries, reproducible R/Python workflows,
+    geospatial analysis, AI-assisted document processing.\\[4pt]
+
+Oct--Dec 2024 &
+  \textbf{English Tutor} \textemdash\ Universit\'{e} Clermont Auvergne\\
+  & Language support and tutoring for students in economics and social sciences.\\[4pt]
+
+2024 &
+  \textbf{Deputy Coordinator} \textemdash\ ATIMM Foundation\\
+  & Programme coordination and organisational support for a development-focused NGO.\\[4pt]
+
+2022 &
+  \textbf{Public Policy Analyst Intern}\\
+  & Observatoire National du Dividende D\'{e}mographique, Chad\\
+  & Research and analysis on demographic dividend and national development policy.\\[4pt]
+
+2021 &
+  \textbf{Opinion Writer Intern} \textemdash\ The Campus Ltd., Rwanda\\
+  & Authored analytical opinion pieces on economics and development policy.\\
+\end{tabular}
+
+%% ---- METHODS & TECHNICAL SKILLS ---------------------------
+\cvsection{Methods \& Technical Skills}
+
+\textbf{Econometric methods:}
+Panel data analysis, event studies, local projections (Jord\`{a}),
+difference-in-differences, propensity score matching, synthetic control,
+regression discontinuity, instrumental variables, time-series analysis,
+spatial econometrics (spatial DiD, spatial lag/error models).
+
+\textbf{Geospatial \& remote sensing:}
+QGIS, Google Earth Engine (JavaScript and Python API),
+raster and vector processing, satellite-based land-cover analysis (Hansen GFW),
+nighttime lights (VIIRS), conflict mapping (ACLED), terrain analysis,
+road-access modelling, park-boundary diagnostics.
+
+\textbf{Statistical software:}
+R (tidyverse, sf, terra, stars, fixest, ggplot2, rmarkdown, quarto),
+Stata, Python (pandas, geopandas, scikit-learn, rasterio, matplotlib).
+
+\textbf{Other software \& reproducibility:}
+\LaTeX, Git/GitHub, R Markdown, Quarto, Excel,
+AI-assisted document processing and classification.
+
+\textbf{Data sources:}
+IMF MONA, WEO/Fiscal Monitor, ICSD, World Bank WDI, IATI,
+Global Forest Watch (Hansen), VIIRS nighttime lights, ACLED, Penn World Tables.
+
+%% ---- LANGUAGES --------------------------------------------
+\cvsection{Languages}
+
+\begin{tabular}{@{}ll@{}}
+French  & Fluent (academic and professional)\\[2pt]
+English & Fluent (academic and professional)\\[2pt]
+Arabic  & Fluent\\[2pt]
+Spanish & Basic\\
+\end{tabular}
+
+%% ---- REFERENCES -------------------------------------------
+\cvsection{References}
+
+Available upon request.
+
+\end{document}

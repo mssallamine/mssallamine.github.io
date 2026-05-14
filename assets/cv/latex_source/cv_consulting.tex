@@ -1,0 +1,183 @@
+%% ============================================================
+%% CV -- CONSULTING  (2 pages)
+%% Allamine Mahamat Moussa
+%% Compile: pdflatex -interaction=nonstopmode cv_consulting.tex
+%% ============================================================
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\usepackage[a4paper,
+            top=1.0cm, bottom=1.2cm,
+            left=1.8cm, right=1.8cm]{geometry}
+
+\usepackage{xcolor}
+\definecolor{navy}{RGB}{13,31,60}
+\definecolor{gold}{RGB}{201,168,76}
+\definecolor{mgray}{RGB}{95,105,120}
+
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+%% -- Column types
+\newcolumntype{D}{>{\raggedright\color{mgray}\small}p{2.2cm}}
+\newcolumntype{C}{p{\dimexpr\linewidth-2.2cm-2\tabcolsep\relax}}
+
+%% -- Section heading (same visual logic as one-page CV)
+\newcommand{\cvsection}[1]{%
+  \vspace{6pt}\noindent%
+  {\small\bfseries\color{navy}\MakeUppercase{#1}}%
+  \par\nointerlineskip\vspace{0.5pt}%
+  {\color{gold}\rule{\linewidth}{0.8pt}}%
+  \par\vspace{2pt}%
+}
+
+%% -- Page footer (no fancyhdr)
+\makeatletter
+\def\ps@cvfoot{%
+  \let\@mkboth\@gobbletwo
+  \def\@oddhead{}\def\@evenhead{}%
+  \def\@oddfoot{\footnotesize\color{mgray}%
+    Allamine Mahamat Moussa \textemdash\ Consulting CV\hfil\thepage}%
+  \def\@evenfoot{\footnotesize\color{mgray}%
+    \thepage\hfil Allamine Mahamat Moussa \textemdash\ Consulting CV}%
+}
+\makeatother
+\pagestyle{cvfoot}
+
+%% ============================================================
+\begin{document}
+
+%% ---- HEADER -----------------------------------------------
+\begin{center}
+  {\Large\bfseries\color{navy} Allamine Mahamat Moussa}\\[2pt]
+  {\small\color{mgray}
+    Development Economist $\;\cdot\;$ Policy Evaluation $\;\cdot\;$
+    Econometrics $\;\cdot\;$ Geospatial Analysis}\\[3pt]
+  {\footnotesize\color{mgray}
+    Allamine\_Mahamat.Moussa@doctorant.uca.fr \;$|$\;
+    mssallamine@gmail.com \;$|$\; ORCID: 0009-0001-5953-0888\\[1pt]
+    linkedin.com/in/moussa-allamine-430361178 \;$|$\;
+    github.com/mssallamine}
+\end{center}
+\vspace{2pt}
+{\color{gold}\rule{\linewidth}{1pt}}
+\vspace{1pt}
+
+%% ---- CONSULTING PROFILE -----------------------------------
+\cvsection{Consulting Profile}
+{\small PhD researcher in Development Economics with experience in EU-funded strategic
+and policy evaluation, impact evaluation support, econometric analysis, geospatial
+evidence, IATI data extraction, and reproducible research workflows. Supports
+research teams, evaluation firms, NGOs, and public institutions with data-driven
+evidence for development policy.}
+
+%% ---- CORE EXPERTISE ---------------------------------------
+\cvsection{Core Expertise}
+{\small
+\begin{tabular}{@{} p{0.46\linewidth} p{0.46\linewidth} @{}}
+\textcolor{gold}{\textbullet}\enspace Policy and strategic evaluation &
+\textcolor{gold}{\textbullet}\enspace Impact evaluation and causal inference \\[3pt]
+\textcolor{gold}{\textbullet}\enspace Econometric and statistical analysis &
+\textcolor{gold}{\textbullet}\enspace Geospatial and remote-sensing analysis \\[3pt]
+\textcolor{gold}{\textbullet}\enspace Data systems, IATI extraction, automation &
+\textcolor{gold}{\textbullet}\enspace Policy briefs, evidence synthesis, research support \\
+\end{tabular}
+}
+
+%% ---- PROFESSIONAL EXPERIENCE ------------------------------
+\cvsection{Professional Experience}
+{\small
+\begin{tabular}{@{}DC@{}}
+Feb--Jul 2025 &
+  \textbf{Intern --- Strategic and Impact Evaluation Department}\\
+  & Aide \`{a} la D\'{e}cision \'{E}conomique (ADE), Brussels, Belgium\\[2pt]
+  & \textcolor{gold}{\textbullet}\enspace
+    Supported EU-funded evaluations: EU--DRC Partnership (2021--2024),
+    Facility for Refugees in Turkey, and GAP~III case studies.\\[1pt]
+  & \textcolor{gold}{\textbullet}\enspace
+    Conducted document review, coding, IATI data extraction, and evidence mapping.\\[1pt]
+  & \textcolor{gold}{\textbullet}\enspace
+    Produced QGIS-based geospatial analysis of project locations and intervention areas.\\[1pt]
+  & \textcolor{gold}{\textbullet}\enspace
+    Used AI-assisted classification tools to process large corpora of programme documents.\\[1pt]
+  & \textcolor{gold}{\textbullet}\enspace
+    Contributed to reproducible R/Python workflows and evaluation data systems.\\[3pt]
+
+Oct--Dec 2024 &
+  \textbf{English Tutor} \textemdash\ Universit\'{e} Clermont Auvergne\\[2pt]
+
+2024 &
+  \textbf{Deputy Coordinator} \textemdash\ ATIMM Foundation\\[2pt]
+
+2022 &
+  \textbf{Public Policy Analyst Intern} \textemdash\
+  Observatoire National du Dividende D\'{e}mographique, Chad\\[2pt]
+
+2021 &
+  \textbf{Opinion Writer Intern} \textemdash\ The Campus Ltd., Rwanda\\
+\end{tabular}
+}
+
+%% ---- SELECTED ANALYTICAL PROJECTS ------------------------
+\cvsection{Selected Analytical Projects}
+{\small
+\begin{tabular}{@{}DC@{}}
+2025-- &
+  \textbf{IMF Programmes and Developmental Fiscal Space}\\
+  & Event-study design on country-year panel (MONA, WEO, ICSD, WDI). Working paper in preparation.\\[2pt]
+
+2025-- &
+  \textbf{Global Financial Cycles and Macroeconomic Sovereignty}\\
+  & U.S.\ rate shocks, external debt exposure, reserve buffers, and policy-space erosion.
+    Data construction; local projections design.\\[2pt]
+
+2024-- &
+  \textbf{Hydropower and Forest Loss in Virunga National Park}\\
+  & Spatial DiD on a 5~km grid-cell panel (2010--2020): forest-loss, conflict, lights,
+    and roads. Matebe project, DRC. Working paper, preparing for submission.\\
+\end{tabular}
+}
+
+%% ---- EDUCATION --------------------------------------------
+\cvsection{Education}
+{\small
+\begin{tabular}{@{}DC@{}}
+2025--2028 &
+  \textbf{PhD in Development Economics} \textemdash\
+  Universit\'{e} Clermont Auvergne / LEO\\
+  & Thesis: \textit{Essays on Macroeconomic Sovereignty in the Global South}\\
+  & Supervisors: Prof.\ Jean-Louis Combes \& Prof.\ Pascale Motel Combes\\[2pt]
+2023--2025 &
+  \textbf{Master 2 in Development Economics} \textemdash\
+  Universit\'{e} Clermont Auvergne\\[2pt]
+2022--2023 &
+  \textbf{Aspire Leaders Program} \textemdash\
+  Aspire Institute / Harvard University\\[2pt]
+2018--2021 &
+  \textbf{Licence in Economics} \textemdash\
+  Kigali Independent University, Rwanda\\
+\end{tabular}
+}
+
+%% ---- TECHNICAL SKILLS -------------------------------------
+\cvsection{Technical Skills}
+{\small
+\textbf{Methods:} Panel data $\cdot$ event studies $\cdot$ local projections $\cdot$
+  DiD $\cdot$ spatial DiD $\cdot$ PSM $\cdot$ synthetic control $\cdot$
+  RDD $\cdot$ IV $\cdot$ time series.\\[2pt]
+\textbf{Software:} R $\cdot$ Stata $\cdot$ Python $\cdot$ QGIS $\cdot$
+  Google Earth Engine $\cdot$ \LaTeX $\cdot$ Git/GitHub $\cdot$ Excel.\\[2pt]
+\textbf{Data:} IATI $\cdot$ IMF MONA/WEO/ICSD $\cdot$ World Bank WDI $\cdot$
+  Global Forest Watch $\cdot$ VIIRS $\cdot$ ACLED.\\[2pt]
+\textbf{Languages:} French (fluent) $\cdot$ English (fluent) $\cdot$
+  Arabic (fluent) $\cdot$ Spanish (basic).
+}
+
+\end{document}
