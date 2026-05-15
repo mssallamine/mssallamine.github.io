@@ -24,8 +24,9 @@
         <li><a href="#about"      class="nav-link" data-i18n="nav_about">About</a></li>
         <li><a href="#research"   class="nav-link" data-i18n="nav_research">Research</a></li>
         <li><a href="#consulting" class="nav-link" data-i18n="nav_consulting">Consulting</a></li>
-        <li><a href="#projects"   class="nav-link" data-i18n="nav_projects">Projects</a></li>
-        <li><a href="#cv"         class="nav-link" data-i18n="nav_cv">CV</a></li>
+        <li><a href="#projects"     class="nav-link" data-i18n="nav_projects">Projects</a></li>
+        <li><a href="#conferences" class="nav-link" data-i18n="nav_conferences">Conferences</a></li>
+        <li><a href="#cv"          class="nav-link" data-i18n="nav_cv">CV</a></li>
         <li><a href="#writing"    class="nav-link" data-i18n="nav_writing">Writing</a></li>
         <li><a href="#contact"    class="nav-link" data-i18n="nav_contact">Contact</a></li>
       </ul>
@@ -81,67 +82,175 @@
     <section id="about" class="section section-light">
       <div class="container">
         <h2 class="section-title" data-i18n="about_title">About</h2>
-        <div class="about-grid">
-          <div class="about-bio">
-            <h3 data-i18n="about_bio_h3">Biography</h3>
-            <p data-i18n-html="about_bio_p1">
-              I am a PhD researcher in development economics at Université Clermont Auvergne,
-              affiliated with the Laboratoire d'Économie d'Orléans (LEO). My doctoral research,
-              titled <em>Essays on Macroeconomic Sovereignty in the Global South</em>, examines
-              how international institutions, global financial cycles, and resource dependence
-              shape fiscal and monetary policy space in developing countries.
-            </p>
-            <p data-i18n="about_bio_p2">
-              My research combines applied econometrics, panel data methods, event studies, local
-              projections, spatial difference-in-differences, and geospatial analysis. I work
-              primarily in R, Stata, Python, QGIS, Google Earth Engine, LaTeX, and Git/GitHub.
-            </p>
-            <p data-i18n="about_bio_p3">
-              Before starting the PhD, I completed a Master 2 in Development Economics at
-              Université Clermont Auvergne, with a thesis on the impact of hydropower projects
-              in Virunga National Park on deforestation. I also completed an internship at
-              Aide à la Décision Économique (ADE), a Belgian evaluation and consultancy firm,
-              where I contributed to strategic and policy evaluations commissioned by the
-              European Union.
-            </p>
+        <p class="section-subtitle" data-i18n="about_intro">
+          PhD researcher in Development Economics at Université Clermont Auvergne / LEO,
+          working on macroeconomic sovereignty, fiscal space, and geospatial impact evaluation
+          in the Global South.
+        </p>
 
-            <h3 style="margin-top:2rem;" data-i18n="about_thesis_h3">PhD Thesis</h3>
-            <p data-i18n-html="about_thesis_p1">
-              <strong>Essays on Macroeconomic Sovereignty in the Global South</strong><br />
-              Université Clermont Auvergne / Laboratoire d'Économie d'Orléans (LEO)<br />
-              2025–2028 (expected)
-            </p>
-            <p data-i18n="about_thesis_p2">
-              Supervised by Prof. Jean-Louis Combes and Prof. Pascale Motel Combes
-              (Université Clermont Auvergne / LEO), with academic collaboration in Chad
-              through Prof. Jean-Claude Kouladoum (Université de N'Djaména / LAREMA).
-            </p>
-            <p data-i18n="about_thesis_p3">
-              The thesis investigates the conditions under which developing countries can sustain
-              productive public investment under IMF programme conditionality; how global financial
-              shocks constrain domestic policy space; how resource dependence shapes fiscal
-              resilience; and — through a geospatial working paper — the environmental effects of
-              hydropower expansion near Virunga National Park, DRC.
-            </p>
-          </div>
+        <div class="profile-dashboard">
 
-          <div class="about-sidebar">
-            <div class="info-card">
-              <h3 data-i18n="about_edu_h3">Education</h3>
-              <ul class="edu-list">
-                <li>
-                  <span class="edu-degree" data-i18n="about_edu_deg1">PhD in Development Economics</span>
-                  <span class="edu-institution" data-i18n="about_edu_inst1">2025–2028 (expected) · Université Clermont Auvergne / LEO</span>
-                </li>
-                <li>
-                  <span class="edu-degree" data-i18n="about_edu_deg2">Master 2 in Development Economics</span>
-                  <span class="edu-institution" data-i18n="about_edu_inst2">Université Clermont Auvergne</span>
-                </li>
-              </ul>
+          <!-- LEFT: photo + identity + bio expand cards -->
+          <div class="profile-left">
+
+            <div class="profile-photo-wrap">
+              <img src="assets/img/profile.jpg" alt="Allamine Mahamat Moussa"
+                   class="profile-photo" onerror="this.style.display='none'" />
+              <span class="profile-initials" aria-hidden="true">AMM</span>
             </div>
 
-            <div class="info-card">
-              <h3 data-i18n-html="about_methods_h3">Methods &amp; Tools</h3>
+            <div class="profile-identity">
+              <p class="profile-name">Allamine Mahamat Moussa</p>
+              <p class="profile-role" data-i18n="profile_role">PhD Researcher in Development Economics</p>
+              <p class="profile-affil" data-i18n="profile_affil">Université Clermont Auvergne / LEO</p>
+            </div>
+
+            <div class="profile-bio">
+              <details class="expand-card about-expand">
+                <summary data-i18n="about_profile_h3">Academic Profile</summary>
+                <div class="expand-body">
+                  <p data-i18n-html="about_profile_body">
+                    I am a doctoral researcher (2025–2028) at Université Clermont Auvergne,
+                    affiliated with the Laboratoire d'Économie d'Orléans (LEO). My thesis,
+                    <em>Essays on Macroeconomic Sovereignty in the Global South</em>, is supervised
+                    by Prof. Jean-Louis Combes and Prof. Pascale Motel Combes, with academic
+                    collaboration in Chad through Prof. Jean-Claude Kouladoum (Université de
+                    N'Djaména / LAREMA). I hold a Master 2 in Development Economics from
+                    Université Clermont Auvergne (2025) and a Licence in Economics from Kigali
+                    Independent University, Rwanda (2021).
+                  </p>
+                </div>
+              </details>
+
+              <details class="expand-card about-expand">
+                <summary data-i18n="about_rfocus_h3">Research Focus</summary>
+                <div class="expand-body">
+                  <p data-i18n="about_rfocus_body">
+                    My research examines macroeconomic sovereignty in the Global South across
+                    four chapters: IMF programme conditionality and developmental fiscal space;
+                    global financial cycles and external financing pressure in developing countries;
+                    resource dependence, fiscal resilience, and structural transformation; and a
+                    geospatial working paper on hydropower and forest loss in Virunga National
+                    Park, DRC. I use panel data, event studies, local projections, spatial
+                    difference-in-differences, and remote-sensing methods.
+                  </p>
+                </div>
+              </details>
+
+              <details class="expand-card about-expand">
+                <summary data-i18n-html="about_eval_h3">Evaluation &amp; Consulting Profile</summary>
+                <div class="expand-body">
+                  <p data-i18n="about_eval_body">
+                    From February to July 2025, I worked as an intern in the Strategic and Impact
+                    Evaluation Department at Aide à la Décision Économique (ADE), Brussels,
+                    contributing to EU-funded programme evaluations. I offer consulting support for
+                    policy and strategic evaluation, impact evaluation, econometric analysis,
+                    geospatial evidence, and reproducible research workflows — working with
+                    evaluation firms, NGOs, international organisations, research teams, and
+                    public institutions.
+                  </p>
+                </div>
+              </details>
+
+              <details class="expand-card about-expand">
+                <summary data-i18n="about_intl_h3">International Background</summary>
+                <div class="expand-body">
+                  <p data-i18n="about_intl_body">
+                    Originally from Chad, I completed my secondary education in N'Djaména before
+                    studying economics at Kigali Independent University in Rwanda (2018–2021).
+                    I participated in the Aspire Leaders Program at the Aspire Institute, affiliated
+                    with Harvard University (2022–2023). I completed graduate studies at Université
+                    Clermont Auvergne in France and gained professional experience in Brussels,
+                    Belgium.
+                  </p>
+                </div>
+              </details>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: education timeline + methods + interests -->
+          <div class="profile-right">
+
+            <div class="profile-section-block">
+              <p class="profile-block-title" data-i18n="about_edu_h3">Education</p>
+              <div class="edu-timeline">
+
+                <div class="edu-tl-item">
+                  <details class="edu-tl-details expand-card">
+                    <summary class="edu-tl-summary">
+                      <span class="edu-tl-hd" data-i18n="edu_phd_h">PhD in Development Economics — 2025–2028 (expected)</span>
+                      <span class="edu-tl-inst" data-i18n="edu_phd_inst">Université Clermont Auvergne / LEO</span>
+                    </summary>
+                    <div class="expand-body edu-tl-body">
+                      <p data-i18n-html="edu_phd_body">
+                        Thesis: <em>Essays on Macroeconomic Sovereignty in the Global South</em>.
+                        Supervised by Prof. Jean-Louis Combes and Prof. Pascale Motel Combes (UCA / LEO).
+                        Academic collaboration: Prof. Jean-Claude Kouladoum, Université de N'Djaména / LAREMA.
+                      </p>
+                    </div>
+                  </details>
+                </div>
+
+                <div class="edu-tl-item">
+                  <details class="edu-tl-details expand-card">
+                    <summary class="edu-tl-summary">
+                      <span class="edu-tl-hd" data-i18n="edu_m2_h">Master 2 in Development Economics — 2023–2025</span>
+                      <span class="edu-tl-inst" data-i18n="edu_m2_inst">Université Clermont Auvergne</span>
+                    </summary>
+                    <div class="expand-body edu-tl-body">
+                      <p data-i18n="edu_m2_body">
+                        Focus: development economics, econometrics, policy evaluation, and applied
+                        quantitative methods. Thesis: environmental impact of hydropower in Virunga
+                        National Park (DRC) on deforestation.
+                      </p>
+                    </div>
+                  </details>
+                </div>
+
+                <div class="edu-tl-item">
+                  <details class="edu-tl-details expand-card">
+                    <summary class="edu-tl-summary">
+                      <span class="edu-tl-hd" data-i18n="edu_lic_h">Licence in Economics — 2018–2021</span>
+                      <span class="edu-tl-inst" data-i18n="edu_lic_inst">Kigali Independent University, Rwanda</span>
+                    </summary>
+                    <div class="expand-body edu-tl-body">
+                      <p data-i18n="edu_lic_body">
+                        Focus: macroeconomics, development economics, statistics, and quantitative analysis.
+                      </p>
+                    </div>
+                  </details>
+                </div>
+
+                <div class="edu-tl-item">
+                  <details class="edu-tl-details expand-card">
+                    <summary class="edu-tl-summary">
+                      <span class="edu-tl-hd" data-i18n="edu_asp_h">Aspire Leaders Program — 2022–2023</span>
+                      <span class="edu-tl-inst" data-i18n="edu_asp_inst">Aspire Institute / Harvard University</span>
+                    </summary>
+                    <div class="expand-body edu-tl-body">
+                      <p data-i18n="edu_asp_body">Leadership and professional development programme with an international cohort.</p>
+                    </div>
+                  </details>
+                </div>
+
+                <div class="edu-tl-item">
+                  <details class="edu-tl-details expand-card">
+                    <summary class="edu-tl-summary">
+                      <span class="edu-tl-hd" data-i18n="edu_bac_h">Baccalauréat de l'Enseignement Secondaire, Series G2 — 2018</span>
+                      <span class="edu-tl-inst" data-i18n="edu_bac_inst">Chad</span>
+                    </summary>
+                    <div class="expand-body edu-tl-body">
+                      <p data-i18n="edu_bac_body">Mention Bien.</p>
+                    </div>
+                  </details>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="profile-section-block">
+              <p class="profile-block-title" data-i18n-html="about_methods_h3">Methods &amp; Tools</p>
               <div class="methods-grid">
                 <span class="method-tag">Panel Data</span>
                 <span class="method-tag">Local Projections</span>
@@ -159,18 +268,19 @@
               </div>
             </div>
 
-            <div class="info-card">
-              <h3 data-i18n="about_int_h3">Research Interests</h3>
+            <div class="profile-section-block">
+              <p class="profile-block-title" data-i18n="about_int_h3">Research Interests</p>
               <ul class="interest-list">
-                <li data-i18n="about_int_1">Macroeconomic sovereignty</li>
-                <li data-i18n-html="about_int_2">Fiscal space &amp; public investment</li>
-                <li data-i18n-html="about_int_3">IMF programmes &amp; conditionality</li>
-                <li data-i18n="about_int_4">Global financial cycles</li>
-                <li data-i18n-html="about_int_5">Resource dependence &amp; structural transformation</li>
-                <li data-i18n="about_int_6">Geospatial impact evaluation</li>
-                <li data-i18n="about_int_7">Development policy in the Global South</li>
+                <li><a href="#research-gfc"      class="interest-link" data-i18n="about_int_1">Macroeconomic sovereignty</a></li>
+                <li><a href="#research-imf"      class="interest-link" data-i18n-html="about_int_2">Fiscal space &amp; public investment</a></li>
+                <li><a href="#research-imf"      class="interest-link" data-i18n-html="about_int_3">IMF programmes &amp; conditionality</a></li>
+                <li><a href="#research-gfc"      class="interest-link" data-i18n="about_int_4">Global financial cycles</a></li>
+                <li><a href="#research-resource" class="interest-link" data-i18n-html="about_int_5">Resource dependence &amp; structural transformation</a></li>
+                <li><a href="#research-virunga"  class="interest-link" data-i18n="about_int_6">Geospatial impact evaluation</a></li>
+                <li><a href="#consulting"         class="interest-link" data-i18n="about_int_7">Development policy in the Global South</a></li>
               </ul>
             </div>
+
           </div>
         </div>
       </div>
@@ -188,91 +298,135 @@
 
         <div class="research-list">
 
-          <article class="research-card">
-            <div class="research-header">
-              <span class="chapter-label" data-i18n="ch1_label">Chapter 1</span>
-              <span class="status-badge status-prelim" data-i18n="ch1_status">Preliminary Analysis · Working Paper in Preparation</span>
+          <details class="research-card expand-card" id="research-imf">
+            <summary class="research-summary">
+              <div class="research-header">
+                <span class="chapter-label" data-i18n="ch1_label">Chapter 1</span>
+                <span class="status-badge status-prelim" data-i18n="ch1_status">Preliminary Analysis · Working Paper in Preparation</span>
+              </div>
+              <h3 class="research-title" data-i18n="ch1_title">
+                Debt Sustainability or Developmental Fiscal Space? IMF Programmes and
+                Public Investment in the Global South
+              </h3>
+            </summary>
+            <div class="expand-body">
+              <p class="research-abstract" data-i18n="ch1_abstract">
+                Examines whether IMF programme entry is associated with changes in fiscal
+                adjustment, public investment, and developmental fiscal space in low- and
+                middle-income countries. Uses cautious, event-study framing with robustness checks.
+              </p>
+              <div class="research-detail-grid">
+                <div class="rd-row">
+                  <span class="rd-label" data-i18n-html="lbl_methods_data">Methods &amp; Data</span>
+                  <span data-i18n="ch1_detail_methods">Event-study design · IMF MONA · WEO/Fiscal Monitor · ICSD · WDI</span>
+                </div>
+                <div class="rd-row">
+                  <span class="rd-label" data-i18n="lbl_policy_rel">Policy Relevance</span>
+                  <span data-i18n="ch1_detail_policy">Links fiscal stabilisation to development-oriented public investment in low- and middle-income countries.</span>
+                </div>
+              </div>
+              <div class="research-meta">
+                <span data-i18n="ch1_meta">Panel Data · Event Study · IMF MONA · Fiscal Policy · Public Investment</span>
+              </div>
             </div>
-            <h3 class="research-title" data-i18n="ch1_title">
-              Debt Sustainability or Developmental Fiscal Space? IMF Programmes and
-              Public Investment in the Global South
-            </h3>
-            <p class="research-abstract" data-i18n="ch1_abstract">
-              This chapter examines whether IMF programme entry is associated with a short-run
-              trade-off between fiscal stabilisation and public investment in low- and middle-income
-              countries. Using programme timing from IMF MONA, fiscal variables from WEO/Fiscal
-              Monitor, and public investment data from the IMF Investment and Capital Stock Dataset,
-              the chapter studies whether fiscal balances improve while public investment is
-              compressed. Additional checks examine private investment, total investment, growth,
-              and HIPC/MDRI debt-relief timing.
-            </p>
-            <div class="research-meta">
-              <span data-i18n="ch1_meta">Panel Data · Event Study · IMF MONA · Fiscal Policy · Public Investment</span>
-            </div>
-          </article>
+          </details>
 
-          <article class="research-card">
-            <div class="research-header">
-              <span class="chapter-label" data-i18n="ch2_label">Chapter 2</span>
-              <span class="status-badge status-data" data-i18n="ch2_status">Data Construction · Preliminary Design</span>
+          <details class="research-card expand-card" id="research-gfc">
+            <summary class="research-summary">
+              <div class="research-header">
+                <span class="chapter-label" data-i18n="ch2_label">Chapter 2</span>
+                <span class="status-badge status-data" data-i18n="ch2_status">Data Construction · Preliminary Design</span>
+              </div>
+              <h3 class="research-title" data-i18n="ch2_title">
+                Global Financial Cycles and Macroeconomic Sovereignty in Developing Countries
+              </h3>
+            </summary>
+            <div class="expand-body">
+              <p class="research-abstract" data-i18n="ch2_abstract">
+                Studies how U.S. rate shocks and global financial conditions affect external
+                financing pressure, external debt exposure, debt-service pressure, reserve buffers,
+                public investment, and macroeconomic policy space in developing countries.
+              </p>
+              <div class="research-detail-grid">
+                <div class="rd-row">
+                  <span class="rd-label" data-i18n-html="lbl_methods_data">Methods &amp; Data</span>
+                  <span data-i18n="ch2_detail_methods">Local projections · U.S. rates · VIX · external debt · reserves · fiscal and investment outcomes</span>
+                </div>
+                <div class="rd-row">
+                  <span class="rd-label" data-i18n="lbl_policy_rel">Policy Relevance</span>
+                  <span data-i18n="ch2_detail_policy">Connects global monetary conditions to macroeconomic sovereignty and policy space in the Global South.</span>
+                </div>
+              </div>
+              <div class="research-meta">
+                <span data-i18n="ch2_meta">Local Projections · U.S. Rate Shocks · External Debt · Reserve Buffers · Macroeconomic Sovereignty</span>
+              </div>
             </div>
-            <h3 class="research-title" data-i18n="ch2_title">
-              Global Financial Cycles and Macroeconomic Sovereignty in Developing Countries
-            </h3>
-            <p class="research-abstract" data-i18n="ch2_abstract">
-              This chapter studies how U.S. rate shocks, changes in global risk, and shifts in
-              dollar conditions create external financing pressures on developing countries.
-              The empirical design examines how external debt exposure, reserve buffers, and
-              debt-service pressure condition the erosion of macroeconomic sovereignty — including
-              contractions in public investment, fiscal space, and growth — in low- and
-              middle-income countries. Under construction using a local projections framework.
-            </p>
-            <div class="research-meta">
-              <span data-i18n="ch2_meta">Local Projections · U.S. Rate Shocks · External Debt · Reserve Buffers · Macroeconomic Sovereignty</span>
-            </div>
-          </article>
+          </details>
 
-          <article class="research-card">
-            <div class="research-header">
-              <span class="chapter-label" data-i18n="ch3_label">Chapter 3</span>
-              <span class="status-badge status-dev" data-i18n="ch3_status">Under Development</span>
+          <details class="research-card expand-card" id="research-resource">
+            <summary class="research-summary">
+              <div class="research-header">
+                <span class="chapter-label" data-i18n="ch3_label">Chapter 3</span>
+                <span class="status-badge status-dev" data-i18n="ch3_status">Under Development</span>
+              </div>
+              <h3 class="research-title" data-i18n="ch3_title">
+                Resource Dependence, Fiscal Resilience, and Structural Transformation
+              </h3>
+            </summary>
+            <div class="expand-body">
+              <p class="research-abstract" data-i18n="ch3_abstract">
+                Studies how commodity shocks and resource dependence affect fiscal resilience and
+                structural transformation in developing economies, and whether institutions, fiscal
+                rules, and diversification strategies mitigate those effects.
+              </p>
+              <div class="research-detail-grid">
+                <div class="rd-row">
+                  <span class="rd-label" data-i18n-html="lbl_methods_data">Methods &amp; Data</span>
+                  <span data-i18n="ch3_detail_methods">Commodity prices · fiscal indicators · structural transformation measures · institutional and diversification data</span>
+                </div>
+                <div class="rd-row">
+                  <span class="rd-label" data-i18n="lbl_policy_rel">Policy Relevance</span>
+                  <span data-i18n="ch3_detail_policy">Focuses on resource-dependent economies and long-run development constraints.</span>
+                </div>
+              </div>
+              <div class="research-meta">
+                <span data-i18n="ch3_meta">Resource Dependence · Commodity Shocks · Fiscal Resilience · Structural Transformation</span>
+              </div>
             </div>
-            <h3 class="research-title" data-i18n="ch3_title">
-              Resource Dependence, Fiscal Resilience, and Structural Transformation
-            </h3>
-            <p class="research-abstract" data-i18n="ch3_abstract">
-              This chapter will examine how commodity-price shocks and resource dependence shape
-              fiscal resilience and structural transformation in developing economies. It will study
-              whether resource-dependent countries are more vulnerable to global shocks, and whether
-              institutions, fiscal rules, and diversification strategies mitigate those effects.
-            </p>
-            <div class="research-meta">
-              <span data-i18n="ch3_meta">Resource Dependence · Commodity Shocks · Fiscal Resilience · Structural Transformation</span>
-            </div>
-          </article>
+          </details>
 
-          <article class="research-card">
-            <div class="research-header">
-              <span class="chapter-label" data-i18n="ch4_label">Chapter 4</span>
-              <span class="status-badge status-wp" data-i18n="ch4_status">Working Paper · Preparing for Journal Submission</span>
+          <details class="research-card expand-card" id="research-virunga">
+            <summary class="research-summary">
+              <div class="research-header">
+                <span class="chapter-label" data-i18n="ch4_label">Chapter 4</span>
+                <span class="status-badge status-wp" data-i18n="ch4_status">Working Paper · Preparing for Journal Submission</span>
+              </div>
+              <h3 class="research-title" data-i18n="ch4_title">
+                Hydropower and Forest Loss in a Conflict-Affected Protected Area:
+                Evidence from the Matebe Project in Virunga
+              </h3>
+            </summary>
+            <div class="expand-body">
+              <p class="research-abstract" data-i18n="ch4_abstract">
+                Spatial impact evaluation of the Matebe hydropower project and forest loss around
+                Virunga National Park, DRC. Distinguishes construction and operational phases;
+                results are sensitive to comparison-group choice.
+              </p>
+              <div class="research-detail-grid">
+                <div class="rd-row">
+                  <span class="rd-label" data-i18n-html="lbl_methods_data">Methods &amp; Data</span>
+                  <span data-i18n="ch4_detail_methods">Spatial DiD · event studies · 5 km grid-cell panel · Hansen GFW · ACLED · VIIRS · terrain and road access</span>
+                </div>
+                <div class="rd-row">
+                  <span class="rd-label" data-i18n="lbl_policy_rel">Policy Relevance</span>
+                  <span data-i18n="ch4_detail_policy">Contributes to debates on energy infrastructure, conservation, and conflict-affected protected areas.</span>
+                </div>
+              </div>
+              <div class="research-meta">
+                <span data-i18n="ch4_meta">Spatial DiD · Remote Sensing · Deforestation · Hydropower · DRC · Virunga</span>
+              </div>
             </div>
-            <h3 class="research-title" data-i18n="ch4_title">
-              Hydropower and Forest Loss in a Conflict-Affected Protected Area:
-              Evidence from the Matebe Project in Virunga
-            </h3>
-            <p class="research-abstract" data-i18n="ch4_abstract">
-              This working paper studies the environmental effects of the Matebe hydropower project
-              near Virunga National Park in the Democratic Republic of Congo. Using a harmonised
-              5 km grid-cell panel for 2010–2020, it combines satellite-based forest-loss data with
-              population, conflict, nighttime lights, terrain, road access, building/settlement
-              indicators, and park-boundary diagnostics. The paper distinguishes construction and
-              operational phases and shows that evidence of localised forest-loss patterns is
-              sensitive to the choice of comparison group.
-            </p>
-            <div class="research-meta">
-              <span data-i18n="ch4_meta">Spatial DiD · Remote Sensing · Deforestation · Hydropower · DRC · Virunga</span>
-            </div>
-          </article>
+          </details>
 
         </div>
       </div>
@@ -290,63 +444,87 @@
 
         <div class="services-grid">
 
-          <div class="service-card">
-            <div class="service-icon">&#9632;</div>
-            <h3 data-i18n="svc1_h3">Policy and Strategic Evaluation</h3>
-            <p data-i18n="svc1_p">
-              Support for evaluation design, theory of change, document review, data extraction,
-              evidence synthesis, and contribution analysis for development programmes and
-              public policies.
-            </p>
-          </div>
+          <details class="service-card expand-card">
+            <summary class="service-summary">
+              <div class="service-icon">&#9632;</div>
+              <h3 data-i18n="svc1_h3">Policy and Strategic Evaluation</h3>
+            </summary>
+            <div class="expand-body">
+              <p data-i18n="svc1_p">
+                Support for evaluation design, theory of change, document review, data extraction,
+                evidence synthesis, and contribution analysis for development programmes and
+                public policies.
+              </p>
+            </div>
+          </details>
 
-          <div class="service-card">
-            <div class="service-icon">&#9650;</div>
-            <h3 data-i18n="svc2_h3">Impact Evaluation and Causal Inference</h3>
-            <p data-i18n="svc2_p">
-              Design and implementation of quasi-experimental evaluations using
-              difference-in-differences, event studies, matching, synthetic control,
-              regression discontinuity, and instrumental variables.
-            </p>
-          </div>
+          <details class="service-card expand-card">
+            <summary class="service-summary">
+              <div class="service-icon">&#9650;</div>
+              <h3 data-i18n="svc2_h3">Impact Evaluation and Causal Inference</h3>
+            </summary>
+            <div class="expand-body">
+              <p data-i18n="svc2_p">
+                Design and implementation of quasi-experimental evaluations using
+                difference-in-differences, event studies, matching, synthetic control,
+                regression discontinuity, and instrumental variables.
+              </p>
+            </div>
+          </details>
 
-          <div class="service-card">
-            <div class="service-icon">&#9679;</div>
-            <h3 data-i18n="svc3_h3">Econometric and Data Analysis</h3>
-            <p data-i18n="svc3_p">
-              Panel-data analysis, local projections, time-series analysis, microeconometrics,
-              survey-data analysis, and reproducible workflows in R, Stata, Python, and Excel.
-            </p>
-          </div>
+          <details class="service-card expand-card">
+            <summary class="service-summary">
+              <div class="service-icon">&#9679;</div>
+              <h3 data-i18n="svc3_h3">Econometric and Data Analysis</h3>
+            </summary>
+            <div class="expand-body">
+              <p data-i18n="svc3_p">
+                Panel-data analysis, local projections, time-series analysis, microeconometrics,
+                survey-data analysis, and reproducible workflows in R, Stata, Python, and Excel.
+              </p>
+            </div>
+          </details>
 
-          <div class="service-card">
-            <div class="service-icon">&#9733;</div>
-            <h3 data-i18n="svc4_h3">Geospatial Analysis and Remote Sensing</h3>
-            <p data-i18n="svc4_p">
-              Spatial data processing, satellite-data analysis, forest-loss measurement,
-              population and conflict mapping, QGIS workflows, Google Earth Engine support,
-              and spatial econometric diagnostics.
-            </p>
-          </div>
+          <details class="service-card expand-card">
+            <summary class="service-summary">
+              <div class="service-icon">&#9733;</div>
+              <h3 data-i18n="svc4_h3">Geospatial Analysis and Remote Sensing</h3>
+            </summary>
+            <div class="expand-body">
+              <p data-i18n="svc4_p">
+                Spatial data processing, satellite-data analysis, forest-loss measurement,
+                population and conflict mapping, QGIS workflows, Google Earth Engine support,
+                and spatial econometric diagnostics.
+              </p>
+            </div>
+          </details>
 
-          <div class="service-card">
-            <div class="service-icon">&#9670;</div>
-            <h3 data-i18n="svc5_h3">Data Systems and Automation</h3>
-            <p data-i18n="svc5_p">
-              Cleaning, harmonising, and documenting datasets; building reproducible research
-              pipelines; extracting information from IATI and institutional databases; and using
-              AI-assisted text classification for large document collections.
-            </p>
-          </div>
+          <details class="service-card expand-card">
+            <summary class="service-summary">
+              <div class="service-icon">&#9670;</div>
+              <h3 data-i18n="svc5_h3">Data Systems and Automation</h3>
+            </summary>
+            <div class="expand-body">
+              <p data-i18n="svc5_p">
+                Cleaning, harmonising, and documenting datasets; building reproducible research
+                pipelines; extracting information from IATI and institutional databases; and using
+                AI-assisted text classification for large document collections.
+              </p>
+            </div>
+          </details>
 
-          <div class="service-card">
-            <div class="service-icon">&#9998;</div>
-            <h3 data-i18n="svc6_h3">Policy Briefs and Research Support</h3>
-            <p data-i18n="svc6_p">
-              Literature reviews, policy notes, research memos, presentation slides, dashboards,
-              and technical annexes for academic and applied policy projects.
-            </p>
-          </div>
+          <details class="service-card expand-card">
+            <summary class="service-summary">
+              <div class="service-icon">&#9998;</div>
+              <h3 data-i18n="svc6_h3">Policy Briefs and Research Support</h3>
+            </summary>
+            <div class="expand-body">
+              <p data-i18n="svc6_p">
+                Literature reviews, policy notes, research memos, presentation slides, dashboards,
+                and technical annexes for academic and applied policy projects.
+              </p>
+            </div>
+          </details>
 
         </div>
 
@@ -362,65 +540,230 @@
       <div class="container">
         <h2 class="section-title" data-i18n="projects_title">Projects</h2>
         <p class="section-subtitle" data-i18n="projects_subtitle">
-          Selected research projects, datasets, and applied work.
+          Selected evaluation, research, and data projects.
         </p>
 
         <div class="projects-grid">
 
-          <div class="project-card">
-            <div class="project-tag" data-i18n="proj1_tag">Thesis Research</div>
-            <h3 data-i18n="proj1_h3">IMF Programmes and Developmental Fiscal Space</h3>
-            <p data-i18n="proj1_p">
-              Reproducible country-year panel combining IMF MONA, WEO/Fiscal Monitor, World Bank
-              WDI, ICSD public/private investment data, and HIPC/MDRI timing controls to study
-              IMF programmes, fiscal adjustment, public investment, and compensating dynamics
-              in the Global South.
-            </p>
-            <div class="project-meta">
-              <span data-i18n="proj1_meta">R · Stata · IMF Data · Panel Data · Public Investment</span>
+          <details class="project-card expand-card">
+            <summary class="project-summary">
+              <div class="project-tag" data-i18n="proj_ade_tag">Applied Experience</div>
+              <h3 data-i18n="proj_ade_h3">ADE Strategic and Policy Evaluation Work</h3>
+            </summary>
+            <div class="expand-body">
+              <p data-i18n="proj_ade_p">
+                From February to July 2025, I worked as an intern in the Strategic and Impact
+                Evaluation Department at Aide à la Décision Économique (ADE), Brussels.
+                I contributed to three EU-funded evaluation assignments, working on document
+                review and coding, IATI data extraction and analysis, QGIS-based geospatial
+                mapping, and AI-assisted document classification. I also contributed to
+                reproducible R/Python analytical workflows.
+              </p>
+              <div class="project-meta">
+                <span data-i18n="proj_ade_meta">Policy Evaluation · EU · ADE · IATI · QGIS · Mixed Methods</span>
+              </div>
+            </div>
+          </details>
+
+          <details class="project-card expand-card">
+            <summary class="project-summary">
+              <div class="project-tag" data-i18n="proj_eudrc_tag">Applied Experience</div>
+              <h3 data-i18n="proj_eudrc_h3">EU–DRC Partnership Evaluation (2021–2024)</h3>
+            </summary>
+            <div class="expand-body">
+              <p data-i18n="proj_eudrc_p">
+                Contributed to the evaluation of the EU–Democratic Republic of Congo cooperation
+                framework (2021–2024) during the ADE internship (2025). Work included document
+                review and coding, IATI data extraction and analysis, and QGIS-based geospatial
+                mapping of intervention locations. General description only; confidential
+                evaluation details are not disclosed.
+              </p>
+              <div class="project-meta">
+                <span data-i18n="proj_eudrc_meta">Policy Evaluation · IATI · QGIS · Geospatial Analysis · EU Development Aid</span>
+              </div>
+            </div>
+          </details>
+
+          <details class="project-card expand-card">
+            <summary class="project-summary">
+              <div class="project-tag" data-i18n="proj_turkey_tag">Applied Experience</div>
+              <h3 data-i18n="proj_turkey_h3">Facility for Refugees in Turkey</h3>
+            </summary>
+            <div class="expand-body">
+              <p data-i18n="proj_turkey_p">
+                Contributed to evidence-mapping and desk research for the evaluation of the EU
+                Facility for Refugees in Turkey, as part of the ADE internship (2025). Tasks
+                included structured data extraction and evidence synthesis. General description
+                only; confidential evaluation details are not disclosed.
+              </p>
+              <div class="project-meta">
+                <span data-i18n="proj_turkey_meta">Policy Evaluation · Evidence Mapping · EU · Refugees · Desk Research</span>
+              </div>
+            </div>
+          </details>
+
+          <details class="project-card expand-card">
+            <summary class="project-summary">
+              <div class="project-tag" data-i18n="proj_gap3_tag">Applied Experience</div>
+              <h3 data-i18n="proj_gap3_h3">GAP III — EU Gender Action Plan Case Studies</h3>
+            </summary>
+            <div class="expand-body">
+              <p data-i18n="proj_gap3_p">
+                Contributed to document analysis and synthesis reporting for EU Gender Action Plan
+                III (GAP III) case studies during the ADE internship (2025). Work involved
+                systematic document review and contribution to evaluation write-up. General
+                description only; confidential evaluation details are not disclosed.
+              </p>
+              <div class="project-meta">
+                <span data-i18n="proj_gap3_meta">Policy Evaluation · Gender · EU · Document Analysis · Synthesis</span>
+              </div>
+            </div>
+          </details>
+
+          <details class="project-card expand-card">
+            <summary class="project-summary">
+              <div class="project-tag" data-i18n="proj_virunga_tag">Working Paper</div>
+              <h3 data-i18n="proj_virunga_h3">Virunga / Matebe Geospatial Impact Evaluation</h3>
+            </summary>
+            <div class="expand-body">
+              <p data-i18n="proj_virunga_p">
+                Working paper on the Matebe hydropower project and forest loss around Virunga
+                National Park, DRC. The analysis uses a harmonised 5 km grid-cell panel combining
+                satellite forest-loss data, population, conflict events, nighttime lights, roads,
+                settlements, terrain, and park-boundary diagnostics, with spatial
+                difference-in-differences.
+              </p>
+              <div class="project-meta">
+                <span data-i18n="proj_virunga_meta">R · Python · QGIS · Google Earth Engine · Remote Sensing · DRC</span>
+              </div>
+            </div>
+          </details>
+
+          <details class="project-card expand-card">
+            <summary class="project-summary">
+              <div class="project-tag" data-i18n="proj_thesis_tag">Thesis Research</div>
+              <h3 data-i18n="proj_thesis_h3">PhD Thesis Data Infrastructure</h3>
+            </summary>
+            <div class="expand-body">
+              <p data-i18n="proj_thesis_p">
+                Reproducible research datasets under construction for the thesis chapters on IMF
+                programmes and fiscal space, and on global financial cycles. Combines IMF MONA,
+                WEO/Fiscal Monitor, ICSD, World Bank WDI, global financial shocks, external debt,
+                reserves, capital-account openness, and investment outcomes.
+              </p>
+              <div class="project-meta">
+                <span data-i18n="proj_thesis_meta">R · Stata · Python · IMF Data · Panel Data · Public Investment · External Finance</span>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONFERENCES ===== -->
+    <section id="conferences" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n-html="conf_title">Conferences &amp; Field Notes</h2>
+        <p class="section-subtitle" data-i18n="conf_subtitle">
+          Selected academic presentations, workshops, and professional engagements.
+        </p>
+
+        <div class="conf-grid">
+
+          <div class="conf-card">
+            <div class="conf-img-area" aria-hidden="true">
+              <span data-i18n="conf_photo_soon">Photo coming soon</span>
+            </div>
+            <div class="conf-body">
+              <h3 data-i18n="conf1_h3">Journées Doctorales d'Orléans</h3>
+              <div class="conf-meta">
+                <div class="conf-meta-row">
+                  <span class="conf-meta-label" data-i18n="conf_lbl_loc">Location</span>
+                  <span data-i18n="conf1_loc">Orléans, France</span>
+                </div>
+                <div class="conf-meta-row">
+                  <span class="conf-meta-label" data-i18n="conf_lbl_date">Date</span>
+                  <span data-i18n="conf1_date">May 2026</span>
+                </div>
+                <div class="conf-meta-row">
+                  <span class="conf-meta-label" data-i18n="conf_lbl_role">Role</span>
+                  <span data-i18n="conf1_role">Doctoral participant · Paper presentation</span>
+                </div>
+              </div>
+              <p class="conf-note" data-i18n="conf1_note">Doctoral research exchange around ongoing PhD work in development economics.</p>
             </div>
           </div>
 
-          <div class="project-card">
-            <div class="project-tag" data-i18n="proj2_tag">Working Paper</div>
-            <h3 data-i18n="proj2_h3">Virunga Hydropower and Deforestation Study</h3>
-            <p data-i18n="proj2_p">
-              Working paper on the Matebe hydropower project and forest loss around Virunga
-              National Park. The analysis combines satellite forest-loss data, population,
-              conflict, nighttime lights, roads, settlements, terrain, and park-boundary
-              diagnostics using spatial difference-in-differences.
-            </p>
-            <div class="project-meta">
-              <span data-i18n="proj2_meta">R · Python · QGIS · Remote Sensing · DRC</span>
+          <div class="conf-card">
+            <div class="conf-img-area" aria-hidden="true">
+              <span data-i18n="conf_photo_soon">Photo coming soon</span>
+            </div>
+            <div class="conf-body">
+              <h3 data-i18n="conf2_h3">ADE Internal Presentation — Remote Sensing for Evaluation</h3>
+              <div class="conf-meta">
+                <div class="conf-meta-row">
+                  <span class="conf-meta-label" data-i18n="conf_lbl_loc">Location</span>
+                  <span data-i18n="conf2_loc">Louvain-la-Neuve / Brussels, Belgium</span>
+                </div>
+                <div class="conf-meta-row">
+                  <span class="conf-meta-label" data-i18n="conf_lbl_date">Date</span>
+                  <span data-i18n="conf2_date">2025</span>
+                </div>
+                <div class="conf-meta-row">
+                  <span class="conf-meta-label" data-i18n="conf_lbl_role">Role</span>
+                  <span data-i18n="conf2_role">Presenter</span>
+                </div>
+              </div>
+              <p class="conf-note" data-i18n="conf2_note">Presentation on remote sensing indicators, geospatial evidence, and their application in policy and impact evaluation.</p>
             </div>
           </div>
 
-          <div class="project-card">
-            <div class="project-tag" data-i18n="proj3_tag">Applied Experience</div>
-            <h3 data-i18n="proj3_h3">ADE Strategic and Policy Evaluation Work</h3>
-            <p data-i18n="proj3_p">
-              At Aide à la Décision Économique (ADE), a Belgium-based evaluation and consultancy
-              firm, I contributed to EU-commissioned evaluations including the EU partnership with
-              the Democratic Republic of Congo (2021–2024), the Facility for Refugees in Turkey,
-              and GAP III case-study work. My tasks included document review, data extraction,
-              IATI analysis, geospatial analysis, and AI-assisted document classification.
-            </p>
-            <div class="project-meta">
-              <span data-i18n="proj3_meta">Policy Evaluation · EU · IATI · Geospatial Analysis · Mixed Methods</span>
+          <div class="conf-card">
+            <div class="conf-img-area" aria-hidden="true">
+              <span data-i18n="conf_photo_soon">Photo coming soon</span>
+            </div>
+            <div class="conf-body">
+              <h3 data-i18n="conf3_h3">Career Conference</h3>
+              <div class="conf-meta">
+                <div class="conf-meta-row">
+                  <span class="conf-meta-label" data-i18n="conf_lbl_loc">Location</span>
+                  <span data-i18n="conf3_loc">Geneva, Switzerland</span>
+                </div>
+                <div class="conf-meta-row">
+                  <span class="conf-meta-label" data-i18n="conf_lbl_date">Date</span>
+                  <span data-i18n="conf3_date">2024</span>
+                </div>
+                <div class="conf-meta-row">
+                  <span class="conf-meta-label" data-i18n="conf_lbl_role">Role</span>
+                  <span data-i18n="conf3_role">Participant</span>
+                </div>
+              </div>
+              <p class="conf-note" data-i18n="conf3_note">Professional development and networking event with an international focus.</p>
             </div>
           </div>
 
-          <div class="project-card">
-            <div class="project-tag" data-i18n="proj4_tag">Dataset</div>
-            <h3 data-i18n="proj4_h3">Global Financial Cycles Dataset</h3>
-            <p data-i18n="proj4_p">
-              Thesis dataset under construction combining global financial shocks, external debt,
-              reserves, capital-account openness, fiscal variables, IMF programme indicators,
-              and investment outcomes to study how external financial conditions constrain
-              policy space in developing countries.
-            </p>
-            <div class="project-meta">
-              <span data-i18n="proj4_meta">Global Financial Cycles · VIX · External Debt · Reserves · Local Projections</span>
+          <div class="conf-card">
+            <div class="conf-img-area" aria-hidden="true">
+              <span data-i18n="conf_photo_soon">Photo coming soon</span>
+            </div>
+            <div class="conf-body">
+              <h3 data-i18n="conf4_h3">International Conference</h3>
+              <div class="conf-meta">
+                <div class="conf-meta-row">
+                  <span class="conf-meta-label" data-i18n="conf_lbl_loc">Location</span>
+                  <span data-i18n="conf4_loc">Turkey</span>
+                </div>
+                <div class="conf-meta-row">
+                  <span class="conf-meta-label" data-i18n="conf_lbl_date">Date</span>
+                  <span data-i18n="conf4_date">2024</span>
+                </div>
+                <div class="conf-meta-row">
+                  <span class="conf-meta-label" data-i18n="conf_lbl_role">Role</span>
+                  <span data-i18n="conf4_role">Participant</span>
+                </div>
+              </div>
+              <p class="conf-note" data-i18n="conf4_note">International academic and professional exchange with participants from diverse backgrounds.</p>
             </div>
           </div>
 
@@ -434,7 +777,7 @@
         <h2 class="section-title" data-i18n="cv_title">Curriculum Vitae</h2>
         <p class="section-subtitle" data-i18n="cv_subtitle">
           Download my CV in the format most relevant to your context.
-          CVs will be updated regularly as research outputs and consulting materials evolve.
+          Files are updated as research outputs and consulting materials evolve.
         </p>
 
         <div class="cv-grid">
@@ -442,7 +785,7 @@
           <div class="cv-card">
             <div class="cv-icon">&#9889;</div>
             <h3 data-i18n="cv1_h3">One-Page Summary</h3>
-            <p data-i18n="cv1_p">A concise one-page overview for quick introductions, conference networking, or initial applications.</p>
+            <p data-i18n="cv1_p">Compact profile for quick screening, networking, and general opportunities.</p>
             <a href="assets/cv/one_page_cv.pdf" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="cv1_btn">
               Download One-Page CV
             </a>
@@ -451,7 +794,7 @@
           <div class="cv-card">
             <div class="cv-icon">&#128200;</div>
             <h3 data-i18n="cv2_h3">Consulting CV</h3>
-            <p data-i18n="cv2_p">Professional CV emphasising evaluation experience, technical skills, client work, and applied data analysis.</p>
+            <p data-i18n="cv2_p">Two-page profile focused on policy evaluation, econometrics, geospatial evidence, and data analysis.</p>
             <a href="assets/cv/consulting_cv.pdf" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="cv2_btn">
               Download Consulting CV
             </a>
@@ -460,7 +803,7 @@
           <div class="cv-card">
             <div class="cv-icon">&#128196;</div>
             <h3 data-i18n="cv3_h3">Academic CV</h3>
-            <p data-i18n="cv3_p">Full academic CV with publications, working papers, conference presentations, teaching, and research experience.</p>
+            <p data-i18n="cv3_p">Academic profile with education, research agenda, working papers, methods, experience, and references.</p>
             <a href="assets/cv/academic_cv.pdf" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="cv3_btn">
               Download Academic CV
             </a>
@@ -479,17 +822,36 @@
           fiscal policy, geospatial evaluation, and research methods.
         </p>
 
-        <div class="writing-placeholder">
-          <div class="placeholder-icon">&#9998;</div>
-          <p data-i18n="writing_ph_p1">
-            Coming soon: notes on development economics, fiscal policy,
-            geospatial evaluation, and research methods.
-          </p>
-          <p class="placeholder-sub" data-i18n="writing_ph_p2">
-            Posts will appear here as I publish. Topics will include IMF conditionality,
-            frontier econometric methods, geospatial tools for development research,
-            and policy-relevant findings from my thesis work.
-          </p>
+        <div class="writing-grid">
+
+          <details class="expand-card writing-card">
+            <summary data-i18n="writing_pnotes_h3">Policy Notes</summary>
+            <div class="expand-body">
+              <p data-i18n="writing_pnotes_p">Coming soon.</p>
+            </div>
+          </details>
+
+          <details class="expand-card writing-card">
+            <summary data-i18n="writing_reflect_h3">Research Reflections</summary>
+            <div class="expand-body">
+              <p data-i18n="writing_reflect_p">Coming soon.</p>
+            </div>
+          </details>
+
+          <details class="expand-card writing-card">
+            <summary data-i18n="writing_conf_h3">Conference Notes</summary>
+            <div class="expand-body">
+              <p data-i18n="writing_conf_p">Coming soon.</p>
+            </div>
+          </details>
+
+          <details class="expand-card writing-card">
+            <summary data-i18n="writing_geo_h3">Geospatial Evaluation Notes</summary>
+            <div class="expand-body">
+              <p data-i18n="writing_geo_p">Coming soon.</p>
+            </div>
+          </details>
+
         </div>
       </div>
     </section>
@@ -519,6 +881,12 @@
               </a>
             </div>
             <div class="contact-item">
+              <span class="contact-label" data-i18n="contact_lbl_web">Website</span>
+              <a href="https://moussa-allamine-mahamat.github.io/allamine-m-moussa" class="contact-link" target="_blank" rel="noopener">
+                moussa-allamine-mahamat.github.io/allamine-m-moussa
+              </a>
+            </div>
+            <div class="contact-item">
               <span class="contact-label" data-i18n="contact_lbl_li">LinkedIn</span>
               <a href="https://www.linkedin.com/in/moussa-allamine-430361178/" class="contact-link" target="_blank" rel="noopener">
                 linkedin.com/in/moussa-allamine-430361178
@@ -526,8 +894,8 @@
             </div>
             <div class="contact-item">
               <span class="contact-label" data-i18n="contact_lbl_gh">GitHub</span>
-              <a href="https://github.com/mssallamine" class="contact-link" target="_blank" rel="noopener">
-                github.com/mssallamine
+              <a href="https://github.com/allamine-m-moussa" class="contact-link" target="_blank" rel="noopener">
+                github.com/allamine-m-moussa
               </a>
             </div>
             <div class="contact-item">

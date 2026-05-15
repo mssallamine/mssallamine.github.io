@@ -129,18 +129,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(targetId);
     if (!target) return;
     e.preventDefault();
+    // Open details before calculating scroll position so height is correct
+    if (target.tagName.toLowerCase() === 'details') target.open = true;
     const headerH = header.offsetHeight;
     const top = target.getBoundingClientRect().top + window.scrollY - headerH;
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
 
+// Open details on page load if URL hash points to one
+if (window.location.hash) {
+  const hashTarget = document.querySelector(window.location.hash);
+  if (hashTarget && hashTarget.tagName.toLowerCase() === 'details') {
+    hashTarget.open = true;
+  }
+}
+
 /* =============================================
    SCROLL-IN ANIMATIONS (Intersection Observer)
    ============================================= */
 
 const animateEls = document.querySelectorAll(
-  '.research-card, .service-card, .project-card, .cv-card, .info-card'
+  '.research-card, .service-card, .project-card, .cv-card, .info-card, .conf-card'
 );
 
 if ('IntersectionObserver' in window) {

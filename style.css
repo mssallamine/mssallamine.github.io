@@ -358,10 +358,20 @@ p:last-child { margin-bottom: 0; }
    ============================================= */
 
 .about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-sidebar {
   display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
   align-items: start;
+}
+
+.about-sidebar .info-card {
+  margin-bottom: 0;
 }
 
 .about-bio h3 {
@@ -799,17 +809,9 @@ p:last-child { margin-bottom: 0; }
     display: none;
   }
 
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-
   .about-sidebar {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
-
-  .info-card { margin-bottom: 0; }
 
   .contact-grid {
     grid-template-columns: 1fr;
@@ -875,6 +877,32 @@ p:last-child { margin-bottom: 0; }
   .hero-section { min-height: 70vh; padding: 2.5rem 1.5rem; }
 
   .lang-switcher { margin-left: 0; gap: 0.15rem; }
+}
+
+/* =============================================
+   SCROLL MARGIN (prevent navbar overlap on anchor nav)
+   ============================================= */
+
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+details[id] {
+  scroll-margin-top: 100px;
+}
+
+/* =============================================
+   RESEARCH INTEREST LINKS
+   ============================================= */
+
+.interest-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.interest-link:hover {
+  color: var(--gold);
 }
 
 /* =============================================
@@ -973,4 +1001,746 @@ html[dir="rtl"] .focus-list li {
 html[dir="rtl"] .focus-list li::before {
   left: auto;
   right: 0;
+}
+
+/* =============================================
+   EXPAND CARDS — base (shared across all types)
+   ============================================= */
+
+/* Remove browser default triangle marker */
+details.expand-card > summary {
+  list-style: none;
+}
+details.expand-card > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Shared expand-body animation */
+@keyframes expandFade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+details[open].expand-card > .expand-body {
+  animation: expandFade 0.18s ease;
+}
+
+/* =============================================
+   ABOUT EXPAND CARDS
+   ============================================= */
+
+details.about-expand {
+  border: 1px solid var(--gray-mid);
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+  background: var(--white);
+  overflow: hidden;
+}
+
+details.about-expand > summary {
+  position: relative;
+  padding: 0.875rem 2.75rem 0.875rem 1.25rem;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--navy);
+  cursor: pointer;
+  user-select: none;
+  transition: background var(--transition);
+}
+
+details.about-expand > summary:hover {
+  background: rgba(201,168,76,0.05);
+}
+
+details.about-expand > summary::after {
+  content: '+';
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--gold);
+  font-weight: 300;
+  pointer-events: none;
+}
+
+details[open].about-expand > summary::after {
+  content: '−';
+}
+
+details.about-expand .expand-body {
+  padding: 0.875rem 1.25rem 1.1rem;
+  border-top: 1px solid var(--gray-mid);
+}
+
+/* =============================================
+   EDUCATION EXPAND CARDS (inside .info-card)
+   ============================================= */
+
+details.edu-card {
+  border-bottom: 1px solid var(--gray-mid);
+}
+
+details.edu-card:last-child {
+  border-bottom: none;
+}
+
+details.edu-card > summary {
+  position: relative;
+  padding: 0.65rem 2rem 0.65rem 0;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+}
+
+details.edu-card > summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--gold);
+  font-weight: 300;
+  pointer-events: none;
+}
+
+details[open].edu-card > summary::after {
+  content: '−';
+}
+
+.edu-card-title {
+  display: block;
+  font-weight: 500;
+  color: var(--text-dark);
+  font-size: 0.93rem;
+}
+
+.edu-card-sub {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--gray-dark);
+  margin-top: 0.1rem;
+}
+
+details.edu-card .expand-body {
+  padding: 0.4rem 0 0.65rem;
+  border-top: none;
+  margin-top: 0;
+}
+
+details.edu-card .expand-body p {
+  font-size: 0.87rem;
+  color: var(--text-mid);
+  margin-bottom: 0;
+  line-height: 1.65;
+}
+
+/* =============================================
+   RESEARCH CARD EXPAND
+   ============================================= */
+
+details.research-card > summary {
+  position: relative;
+  padding-right: 2rem;
+  cursor: pointer;
+  user-select: none;
+  display: block;
+}
+
+details.research-card > summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 0.15rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--gold);
+  font-weight: 300;
+  pointer-events: none;
+}
+
+details[open].research-card > summary::after {
+  content: '−';
+}
+
+details.research-card .expand-body {
+  border-top: 1px solid var(--gray-mid);
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+details.research-card > summary .research-title {
+  margin-bottom: 0;
+}
+
+/* Research detail grid (methods & policy rows) */
+.research-detail-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+.rd-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  align-items: baseline;
+}
+
+.rd-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dark);
+}
+
+/* =============================================
+   SERVICE CARD EXPAND
+   ============================================= */
+
+details.service-card > summary {
+  position: relative;
+  padding-right: 2rem;
+  cursor: pointer;
+  user-select: none;
+  display: block;
+}
+
+details.service-card > summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--gold);
+  font-weight: 300;
+  pointer-events: none;
+}
+
+details[open].service-card > summary::after {
+  content: '−';
+}
+
+details.service-card .expand-body {
+  border-top: 1px solid var(--gray-mid);
+  padding-top: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* =============================================
+   PROJECT CARD EXPAND
+   ============================================= */
+
+details.project-card > summary {
+  position: relative;
+  padding-right: 2rem;
+  cursor: pointer;
+  user-select: none;
+  display: block;
+}
+
+details.project-card > summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--gold);
+  font-weight: 300;
+  pointer-events: none;
+}
+
+details[open].project-card > summary::after {
+  content: '−';
+}
+
+details.project-card .expand-body {
+  border-top: 1px solid var(--gray-mid);
+  padding-top: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* =============================================
+   WRITING CARDS & GRID
+   ============================================= */
+
+.writing-grid {
+  max-width: 720px;
+}
+
+details.writing-card {
+  border: 1px solid var(--gray-mid);
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+  background: var(--gray-light);
+  overflow: hidden;
+}
+
+details.writing-card > summary {
+  position: relative;
+  padding: 0.875rem 2.75rem 0.875rem 1.25rem;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--navy);
+  cursor: pointer;
+  user-select: none;
+  transition: background var(--transition);
+}
+
+details.writing-card > summary:hover {
+  background: rgba(201,168,76,0.06);
+}
+
+details.writing-card > summary::after {
+  content: '+';
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--gold);
+  font-weight: 300;
+  pointer-events: none;
+}
+
+details[open].writing-card > summary::after {
+  content: '−';
+}
+
+details.writing-card .expand-body {
+  padding: 0.875rem 1.25rem 1.1rem;
+  border-top: 1px solid var(--gray-mid);
+  background: var(--white);
+}
+
+/* =============================================
+   RTL OVERRIDES — expand cards
+   ============================================= */
+
+/* Expand body text gets Arabic font */
+html[dir="rtl"] .expand-body p,
+html[dir="rtl"] .expand-body span,
+html[dir="rtl"] .rd-label,
+html[dir="rtl"] .edu-card-title,
+html[dir="rtl"] .edu-card-sub {
+  font-family: 'Noto Sans Arabic', system-ui, sans-serif;
+}
+
+/* Flip + indicator for about-expand and writing-card */
+html[dir="rtl"] details.about-expand > summary,
+html[dir="rtl"] details.writing-card > summary {
+  padding-right: 1.25rem;
+  padding-left: 2.75rem;
+}
+
+html[dir="rtl"] details.about-expand > summary::after,
+html[dir="rtl"] details.writing-card > summary::after {
+  right: auto;
+  left: 1.25rem;
+}
+
+/* Flip + indicator for edu-card */
+html[dir="rtl"] details.edu-card > summary {
+  padding-right: 0;
+  padding-left: 2rem;
+}
+
+html[dir="rtl"] details.edu-card > summary::after {
+  right: auto;
+  left: 0;
+}
+
+/* Flip + indicator for research, service, project cards */
+html[dir="rtl"] details.research-card > summary,
+html[dir="rtl"] details.service-card > summary,
+html[dir="rtl"] details.project-card > summary {
+  padding-right: 0;
+  padding-left: 2rem;
+}
+
+html[dir="rtl"] details.research-card > summary::after,
+html[dir="rtl"] details.service-card > summary::after,
+html[dir="rtl"] details.project-card > summary::after {
+  right: auto;
+  left: 0;
+}
+
+/* rd-row label alignment in RTL */
+html[dir="rtl"] .rd-row {
+  direction: rtl;
+}
+
+/* =============================================
+   PROFILE DASHBOARD
+   ============================================= */
+
+.profile-dashboard {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* --- Left column --- */
+
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-photo-wrap {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: var(--navy-mid);
+  border: 3px solid var(--gold);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.profile-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-initials {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  letter-spacing: 0.05em;
+  pointer-events: none;
+}
+
+.profile-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.profile-name {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0;
+}
+
+.profile-role {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  margin-bottom: 0;
+}
+
+.profile-affil {
+  font-size: 0.82rem;
+  color: var(--gray-dark);
+  margin-bottom: 0;
+}
+
+.profile-bio {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Right column --- */
+
+.profile-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profile-section-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.profile-block-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 0;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+}
+
+/* =============================================
+   EDUCATION TIMELINE
+   ============================================= */
+
+.edu-timeline {
+  border-left: 2px solid var(--gray-mid);
+  padding-left: 1.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-tl-item {
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.edu-tl-item::before {
+  content: '';
+  position: absolute;
+  left: calc(-1.75rem - 1px);
+  top: 0.55rem;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--gray-light);
+  flex-shrink: 0;
+}
+
+/* Remove browser default triangle marker */
+details.edu-tl-details > summary {
+  list-style: none;
+}
+details.edu-tl-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.edu-tl-details > summary {
+  position: relative;
+  padding: 0.4rem 1.75rem 0.4rem 0;
+  cursor: pointer;
+  user-select: none;
+  display: block;
+}
+
+details.edu-tl-details > summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 0.45rem;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--gold);
+  font-weight: 300;
+  pointer-events: none;
+}
+
+details[open].edu-tl-details > summary::after {
+  content: '−';
+}
+
+.edu-tl-hd {
+  display: block;
+  font-weight: 500;
+  font-size: 0.92rem;
+  color: var(--text-dark);
+  line-height: 1.4;
+}
+
+.edu-tl-inst {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--gray-dark);
+  margin-top: 0.1rem;
+}
+
+.edu-tl-body {
+  padding: 0.35rem 0 0.5rem;
+  border-top: none;
+}
+
+.edu-tl-body p {
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* =============================================
+   CONFERENCES SECTION
+   ============================================= */
+
+.conf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.conf-card {
+  background: var(--white);
+  border: 1px solid var(--gray-mid);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.conf-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+  transform: translateY(-3px);
+}
+
+.conf-img-area {
+  height: 120px;
+  background: var(--navy-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conf-img-area span {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.conf-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.conf-body h3 {
+  font-size: 1rem;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.conf-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.conf-meta-row {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  align-items: baseline;
+}
+
+.conf-meta-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+}
+
+.conf-note {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+/* =============================================
+   PROFILE DASHBOARD — RESPONSIVE
+   ============================================= */
+
+@media (max-width: 900px) {
+  .profile-dashboard {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .profile-left {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .profile-bio {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .conf-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-left {
+    flex-direction: column;
+  }
+}
+
+/* =============================================
+   RTL OVERRIDES — profile dashboard & timeline
+   ============================================= */
+
+html[dir="rtl"] .profile-name,
+html[dir="rtl"] .profile-role,
+html[dir="rtl"] .profile-affil,
+html[dir="rtl"] .profile-block-title,
+html[dir="rtl"] .edu-tl-hd,
+html[dir="rtl"] .edu-tl-inst,
+html[dir="rtl"] .edu-tl-body p,
+html[dir="rtl"] .conf-body h3,
+html[dir="rtl"] .conf-note {
+  font-family: 'Noto Sans Arabic', system-ui, sans-serif;
+}
+
+/* Timeline: flip border from left to right */
+html[dir="rtl"] .edu-timeline {
+  border-left: none;
+  border-right: 2px solid var(--gray-mid);
+  padding-left: 0;
+  padding-right: 1.75rem;
+}
+
+html[dir="rtl"] .edu-tl-item::before {
+  left: auto;
+  right: calc(-1.75rem - 1px);
+  transform: translateX(50%);
+}
+
+html[dir="rtl"] details.edu-tl-details > summary {
+  padding-left: 1.75rem;
+  padding-right: 0;
+}
+
+html[dir="rtl"] details.edu-tl-details > summary::after {
+  right: auto;
+  left: 0;
+}
+
+/* Conferences meta row in RTL */
+html[dir="rtl"] .conf-meta-row {
+  direction: rtl;
+}
+
+html[dir="rtl"] .conf-meta-label,
+html[dir="rtl"] .conf-meta-row span {
+  font-family: 'Noto Sans Arabic', system-ui, sans-serif;
 }
